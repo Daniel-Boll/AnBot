@@ -59,7 +59,7 @@ const extractName = (name) => {
   while (!completed) {
     const current = name.shift();
     if (current.includes("]")) completed = true;
-    placeholder += current.match(/[a-z]+/gi)[0] + " ";
+    placeholder += current.match(/[a-z0-9]+/gi)[0] + " ";
   }
 
   // Taking the last " " space that has been added
